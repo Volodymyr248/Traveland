@@ -3480,6 +3480,10 @@
             }));
         }
     }), 0);
+    window.addEventListener("load", windowLoad);
+    function windowLoad() {
+        document.body.classList.add("loaded");
+    }
     window["FLS"] = true;
     isWebp();
     menuInit();

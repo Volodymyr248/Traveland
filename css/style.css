@@ -249,6 +249,12 @@ h6 {
       flex-wrap: wrap;
 }
 
+.menu__link {
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
 .icon-menu {
   display: none;
 }
@@ -398,6 +404,45 @@ h6 {
 
 .main__text:not(:last-child) {
   margin-bottom: 2.5rem;
+}
+
+.main__title,
+.main__text,
+.main__button {
+  -webkit-transform: translate(0px, 50px);
+      -ms-transform: translate(0px, 50px);
+          transform: translate(0px, 50px);
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.loaded .main__title {
+  -webkit-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.loaded .main__text {
+  -webkit-transition-delay: 0.7s;
+       -o-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.loaded .main__button {
+  -webkit-transition-delay: 0.7s;
+       -o-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.loaded .main__title,
+.loaded .main__text,
+.loaded .main__button {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .location__items {
@@ -1103,15 +1148,15 @@ h6 {
   }
 
   .header {
-    height: 5.625rem;
+    height: 4.375rem;
   }
 
   .header {
-    padding-top: 1.25rem;
+    padding-top: 0.625rem;
   }
 
   .header {
-    padding-bottom: 1.25rem;
+    padding-bottom: 0.625rem;
   }
 
   .footer {
@@ -1200,39 +1245,39 @@ h6 {
     }
 }
 
-@supports (height: clamp( 5.625rem , 4.7916666667rem  +  3.7037037037vw , 7.5rem )) {
+@supports (height: clamp( 4.375rem , 2.9861111111rem  +  6.1728395062vw , 7.5rem )) {
     .header {
-      height: clamp( 5.625rem , 4.7916666667rem  +  3.7037037037vw , 7.5rem );
+      height: clamp( 4.375rem , 2.9861111111rem  +  6.1728395062vw , 7.5rem );
     }
 }
 
-@supports not (height: clamp( 5.625rem , 4.7916666667rem  +  3.7037037037vw , 7.5rem )) {
+@supports not (height: clamp( 4.375rem , 2.9861111111rem  +  6.1728395062vw , 7.5rem )) {
     .header {
-      height: calc(5.625rem + 1.875 * (100vw - 22.5rem) / 50.625);
+      height: calc(4.375rem + 3.125 * (100vw - 22.5rem) / 50.625);
     }
 }
 
-@supports (padding-top: clamp( 1.25rem , 0.8333333333rem  +  1.8518518519vw , 2.1875rem )) {
+@supports (padding-top: clamp( 0.625rem , -0.0694444444rem  +  3.0864197531vw , 2.1875rem )) {
     .header {
-      padding-top: clamp( 1.25rem , 0.8333333333rem  +  1.8518518519vw , 2.1875rem );
+      padding-top: clamp( 0.625rem , -0.0694444444rem  +  3.0864197531vw , 2.1875rem );
     }
 }
 
-@supports not (padding-top: clamp( 1.25rem , 0.8333333333rem  +  1.8518518519vw , 2.1875rem )) {
+@supports not (padding-top: clamp( 0.625rem , -0.0694444444rem  +  3.0864197531vw , 2.1875rem )) {
     .header {
-      padding-top: calc(1.25rem + 0.9375 * (100vw - 22.5rem) / 50.625);
+      padding-top: calc(0.625rem + 1.5625 * (100vw - 22.5rem) / 50.625);
     }
 }
 
-@supports (padding-bottom: clamp( 1.25rem , 0.8333333333rem  +  1.8518518519vw , 2.1875rem )) {
+@supports (padding-bottom: clamp( 0.625rem , -0.0694444444rem  +  3.0864197531vw , 2.1875rem )) {
     .header {
-      padding-bottom: clamp( 1.25rem , 0.8333333333rem  +  1.8518518519vw , 2.1875rem );
+      padding-bottom: clamp( 0.625rem , -0.0694444444rem  +  3.0864197531vw , 2.1875rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 1.25rem , 0.8333333333rem  +  1.8518518519vw , 2.1875rem )) {
+@supports not (padding-bottom: clamp( 0.625rem , -0.0694444444rem  +  3.0864197531vw , 2.1875rem )) {
     .header {
-      padding-bottom: calc(1.25rem + 0.9375 * (100vw - 22.5rem) / 50.625);
+      padding-bottom: calc(0.625rem + 1.5625 * (100vw - 22.5rem) / 50.625);
     }
 }
 
